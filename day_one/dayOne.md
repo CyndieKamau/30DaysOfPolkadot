@@ -230,4 +230,17 @@ yarn --version
 ```
 
 
+## N.B. As of 04/04/2023 2155 hrs, I haven't solved the opcode error for my node;
+## Looking for solution; Most answers are on downgrading `nightly` from `1.70` to `1.68`;
+
+## My current `nightly ` version;
+
+```
+rustc +nightly --version
+rustc 1.70.0-nightly (cf7ada217 2023-04-03)
+
+```
+## I'll try it out see how it goes... Goodnight! Day One. 
+
+
 
