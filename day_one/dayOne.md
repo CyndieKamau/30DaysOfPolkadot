@@ -148,3 +148,86 @@ The error indicates that the client is unable to parse or understand a specific 
 
 This can happen when using a version of the client that is not compatible with the code being executed.
 
+
+
+### N.B. Errors encountered installing `yarn`
+
+### Realized I didn't have `yarn` installed;
+
+```
+yarn --version
+
+Command 'yarn' not found, but can be installed with:
+
+sudo apt install cmdtest
+
+
+```
+### Installed `yarn` using `sudo apt install cmdtest` command;
+
+```
+hp@Cyndie:~/Desktop/30DaysOfPolkadot/day_one/substrate-node-template$ sudo apt install cmdtest
+[sudo] password for hp: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  python3-cliapp python3-markdown python3-packaging python3-pyparsing python3-ttystatus
+Suggested packages:
+  python-markdown-doc python-pyparsing-doc
+The following NEW packages will be installed:
+cmdtest python3-cliapp python3-markdown python3-packaging python3-pyparsing python3-ttystatus
+.....
+```
+
+### Checked the `yarn` version;
+
+```
+yarn --version
+0.32+git
+```
+
+### For this tutorial atleast `yarn v3` was needed; tried upgrading it;
+
+```
+ yarn self-update
+00h00m00s 0/0: : ERROR: [Errno 2] No such file or directory: 'self-update'
+
+```
+
+### Checked online; `yarn self-update` was not being used anymore; Tried `npm install -g yarn@3`
+
+```
+hp@Cyndie:~/substrate-front-end-template$ npm install -g yarn@3
+npm ERR! code ETARGET
+npm ERR! notarget No matching version found for yarn@3.
+npm ERR! notarget In most cases you or one of your dependencies are requesting
+npm ERR! notarget a package version that doesn't exist.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/hp/.npm/_logs/2023-04-04T18_49_52_456Z-debug-0.log
+
+```
+
+### Used `corepack` binary tool found in `node.js`; Enabled it first;
+
+```
+corepack enable
+```
+
+### Updated the global yarn version using corepack;
+
+```
+corepack prepare yarn@stable --activate
+```
+
+### Checked the yarn version again;
+
+```
+yarn --version
+3.1.1
+
+```
+
+
+
