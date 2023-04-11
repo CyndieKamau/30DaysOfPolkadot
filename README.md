@@ -4,7 +4,7 @@ This repo is all about creating smart contracts in Rust, and deploying them on t
 
 Created by Cyndie.
 
-Polkadot Blockchain Roadmap
+# Polkadot Blockchain Roadmap
 
 ## Introduction to Polkadot
 1.1. What is Polkadot?
